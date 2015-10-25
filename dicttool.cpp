@@ -1,6 +1,7 @@
 #include "dicttool.h"
 
 #include <QDebug>
+#include <QDir>
 #include <QFile>
 #include <QStringList>
 #include <QElapsedTimer>
@@ -135,6 +136,13 @@ bool DictTool::readFromFile()
 
     // Save cache
     qDebug() << "Writing word cache...";
+
+    if( !QDir().mkpath("data") )
+    {
+        _errorstring = "Couldn't create cache directory.";
+        return false;
+    }
+
     QFile wordsOut("data/words.dat");
     if(wordsOut.open(QIODevice::WriteOnly))
     {

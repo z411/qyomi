@@ -10,7 +10,7 @@ It mimics the behavior of JParser section of the Windows-only Translation Aggreg
 * QMake
 * libmecab development libraries
 
-You also need the edict dictionary for definitions.
+You also need the edict dictionary for definitions (edict2 recommended).
 
 ## Compiling and running
 You must install the dependencies, clone the code, and run QMake and make.
@@ -23,8 +23,8 @@ Example on Debian based distros:
     cd qyomi
     qmake
     make
-    wget http://ftp.monash.edu.au/pub/nihongo/edict.gz
-    gunzip edict.gz
+    wget http://ftp.monash.edu.au/pub/nihongo/edict2.gz
+    gunzip edict2.gz
     ./qyomi
 
 Then try copying Japanese text to the clipboard and it should appear.

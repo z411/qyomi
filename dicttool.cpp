@@ -1,5 +1,6 @@
 #include "dicttool.h"
 
+#include <QDataStream>
 #include <QDebug>
 #include <QDir>
 #include <QFile>
